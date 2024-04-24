@@ -1,0 +1,19 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - src
+
+    tmpDir: .tmp/phpstan
+
+    # The level 8 is the highest level
+    level: 8
+
+    ignoreErrors:
+        - '#Access to an undefined property HibridVod\\Database\\Models\\[a-zA-Z0-9\\_]+::\$[a-zA-Z0-9\\_]+\.#'
+
+
+    bootstrapFiles:
+        - %rootDir%/../../../phpstan.bootstrap.php
